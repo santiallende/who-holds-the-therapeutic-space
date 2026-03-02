@@ -40,11 +40,16 @@ export default function App() {
           Who Holds The Therapeutic Space?
         </h1>
         {/* Stats row — each figure is sourced from data.js, not invented */}
-        <div style={{ fontSize: "10px", color: "#6a5a42", marginTop: 3, display: "flex", flexWrap: "wrap", gap: "0 14px" }}>
+        <div style={{ fontSize: "10px", color: "#6a5a42", marginTop: 3, display: "flex", flexWrap: "wrap", gap: "0 14px", alignItems: "center" }}>
           <span title="Sum of disclosed raises across 15 tracked platforms (see Intel tab)">$4.8B+ raised</span>
           <span title="Platform, public, cautionary, AI, and wellness nodes in the network">15 platforms tracked</span>
           <span title="Insurers with documented equity stakes in platforms they also reimburse">8 insurer-investors</span>
           <span title="Events logged from first tracked funding round (BetterHelp, 2013)">2013 – 2026</span>
+          <a href="https://santi-allende-psyd.ghost.io/who-holds-the-therapeutic-space/"
+            target="_blank" rel="noopener noreferrer"
+            style={{ marginLeft: "auto", fontSize: "10px", color: "#c8a050", textDecoration: "none", letterSpacing: ".04em", whiteSpace: "nowrap" }}>
+            Read the full analysis →
+          </a>
         </div>
       </header>
 
@@ -82,8 +87,21 @@ export default function App() {
       <footer style={{
         padding: "4px 16px", borderTop: "1px solid #1e1e18",
         fontSize: "8px", color: "#3e3c2e", flexShrink: 0,
+        display: "flex", alignItems: "center", justifyContent: "space-between",
       }}>
-        Sources: Fierce Healthcare · Behavioral Health Business · Fortune · PR Newswire · SEC filings
+        <span>Sources: Fierce Healthcare · Behavioral Health Business · Fortune · PR Newswire · SEC filings</span>
+        <div style={{ display: "flex", gap: 12, flexShrink: 0 }}>
+          <a href="https://github.com/santiallende/who-holds-the-therapeutic-space"
+            target="_blank" rel="noopener noreferrer"
+            style={{ color: "#5a5040", textDecoration: "none" }}>
+            ↗ Source
+          </a>
+          <a href="https://www.linkedin.com/in/santi-allende-psyd/"
+            target="_blank" rel="noopener noreferrer"
+            style={{ color: "#5a5040", textDecoration: "none" }}>
+            ↗ LinkedIn
+          </a>
+        </div>
       </footer>
     </div>
   );
