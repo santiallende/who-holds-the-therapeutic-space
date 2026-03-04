@@ -108,7 +108,12 @@ export const NODES = [
     conflict:"a16z backs BOTH Ash (AI therapy chatbot) AND Headway AND Talkiatry (800+ employed psychiatrists) — three competing care models (AI, human, and employed psychiatrist), one investor.",
     src:"https://www.businesswire.com/news/home/20250722566346/en/Slingshot-Launches-Ash-the-First-AI-Designed-for-Therapy",
     srcLabel:"Business Wire · Jul 2025" },
-  // ── Wellness ──
+  { id:"ease",     label:"Ease Health",    type:"ai",     r:12,
+    raised:"$41M", val:"—", status:"Private — emerged from stealth Feb 2026",
+    investors:["a16z"],
+    conflict:"a16z leads $41M Series A for the EHR/CRM/RCM layer that sits beneath behavioral health providers — including Headway and Talkiatry providers. CEO Zach Cohen is a former a16z investing partner. President Steve Gold previously built and sold Refresh Mental Health to Optum. a16z now holds equity across the full stack: therapist matching (Headway), employed psychiatrists (Talkiatry), AI therapy (Ash), and the underlying clinical record infrastructure (Ease).",
+    src:"https://www.businesswire.com/news/home/20260227368260/en/Ease-Health-Emerges-from-Stealth-with-%2441M-from-Andreessen-Horowitz-to-Redefine-the-Operating-System-for-Behavioral-Health",
+    srcLabel:"Business Wire · Feb 2026" },
   { id:"allia",    label:"Allia Health",  type:"platform",   r:12,
     raised:"$2M", status:"Private — seed Jun 2025",
     investors:["Draper Associates ⚠","Boost VC","Oxford University Seed Fund","Stanford Arben Ventures"],
@@ -242,6 +247,8 @@ export const LINKS = [
   { s:"draper",   t:"allia",      type:"investment" },
   // ── Cerebral (cautionary) ──
   { s:"a16z",     t:"cerebral",   type:"investment" },
+  // ── Ease Health ──
+  { s:"a16z",     t:"ease",       type:"investment" },
   // ── Board Seats (cross-portfolio) ──
   { s:"spark",    t:"headway",    type:"board" },
   { s:"a16z",     t:"headway",    type:"board" },
@@ -901,6 +908,24 @@ export const COMPANIES = [
     src:"https://bhbusiness.com/2026/02/10/grow-therapy-buys-ai-scribe-tool-tenor-therapy/",
     srcLabel:"BHB · Feb 2026",
   },
+  {
+    id:"ease", label:"Ease Health", type:"ai", founded:2023,
+    hq:"New York, NY", raised:"$41M", val:"—", status:"Private — emerged from stealth Feb 2026",
+    model:"AI-native CRM + EHR + RCM platform for behavioral health providers. Replaces 6-10 fragmented systems with one unified stack. Covers admissions, intake, clinical documentation, utilization review, billing, and collections.",
+    executives:[
+      { title:"Co-Founder & CEO", name:"Zach Cohen", note:"Former investing partner at a16z — now CEO of a16z portfolio company. Previously invested in healthcare and fintech companies from inside the firm.", src:"https://a16z.com/announcement/investing-in-ease/" },
+      { title:"CTO", name:"Raymond Wang", note:"Engineering leader with background scaling technical teams.", src:"https://a16z.com/announcement/investing-in-ease/" },
+      { title:"President", name:"Steve Gold", note:"Previously built and sold Refresh Mental Health to Optum — the same Optum acquisition already documented as a conflict in this network. Now leading the infrastructure layer beneath providers.", src:"https://a16z.com/announcement/investing-in-ease/" },
+    ],
+    board:[
+      { title:"Lead Investor", name:"Daisy Wolf", note:"General Partner at a16z Bio + Health. Also invested in Headway.", src:"https://a16z.com/announcement/investing-in-ease/" },
+    ],
+    investors:["a16z"],
+    portfolio_mh:[],
+    conflict:"CRITICAL: a16z now holds equity across the full behavioral health stack — therapist matching (Headway), employed psychiatrists (Talkiatry), AI therapy (Ash), AND the underlying EHR/billing infrastructure (Ease). CEO Cohen came from inside a16z. President Gold previously sold Refresh Mental Health to Optum. The same VC now controls how patients find care, who delivers it, and where their clinical records live.",
+    src:"https://www.businesswire.com/news/home/20260227368260/en/Ease-Health-Emerges-from-Stealth-with-%2441M-from-Andreessen-Horowitz-to-Redefine-the-Operating-System-for-Behavioral-Health",
+    srcLabel:"Business Wire · Feb 2026",
+  },
 ];
 
 // ─── TIMELINE ─────────────────────────────────────────────────────────────────
@@ -944,6 +969,7 @@ export const TIMELINE_EVENTS = [
   { id:"t35", year:2023, date:"2023-10", type:"conflict", company:"hcsc",           title:"⚠ HCSC Leads Headway Series C Investment",
     amount:125, detail:"HCSC leads the strategic investor portion of Headway's $125M Series C — then immediately expands Headway to all 5 HCSC states for 18.6M members. Investor + insurer + payer are the same organization.", src:"https://www.hcsc.com/newsroom/news-releases/2023/strategic-investment-headway-behavioral-health" },
   { id:"t31", year:2026, date:"2026-02", type:"raise",    company:"talkiatry",    title:"Talkiatry Series D — $210M",             amount:210,  detail:"Largest behavioral health raise of 2026. Perceptive Advisors leads. a16z continues. $450M+ total. 800+ employed psychiatrists, 45 states.", src:"https://bhbusiness.com/2026/02/12/talkiatry-raises-210m-to-expand-digital-ai-powered-psychiatry-practice/" },
+  { id:"t_ease", year:2026, date:"2026-02", type:"conflict", company:"ease",      title:"⚠ Ease Health: a16z Backs the EHR Layer — $41M Series A",  amount:41,   detail:"a16z leads $41M Series A for Ease Health, an AI-native EHR/CRM/RCM platform for behavioral health providers. CEO Zach Cohen is a former a16z investing partner. President Steve Gold previously built and sold Refresh Mental Health to Optum. a16z now holds equity across the full stack: patient matching (Headway), employed psychiatrists (Talkiatry), AI therapy (Ash), and clinical records/billing infrastructure (Ease). One VC now controls the entire care delivery architecture.", src:"https://www.businesswire.com/news/home/20260227368260/en/Ease-Health-Emerges-from-Stealth-with-%2441M-from-Andreessen-Horowitz-to-Redefine-the-Operating-System-for-Behavioral-Health", srcLabel:"Business Wire · Feb 2026" },
   { id:"t_mh1", year:2021, date:"2021-02", type:"raise",  company:"modernhealth",  title:"Modern Health — $170M, $1.17B Valuation",  amount:170,  detail:"Modern Health raises $170M at $1.17B valuation. Kleiner Perkins leads. 190+ enterprise clients. Founders Fund (Peter Thiel) among investors — raises political alignment questions for a healthcare benefits platform.", src:"https://www.fiercehealthcare.com/tech/modern-health-banks-51m-funding-round-to-expand-digital-mental-health-tools-for-employees", srcLabel:"Fierce Healthcare · Feb 2021" },
   { id:"t_mh2", year:2025, date:"2025-04", type:"warning", company:"modernhealth", title:"⚠ Modern Health CEO Transition",          amount:null, detail:"Founder Alyson Watson steps down as CEO, transitions to Executive Chair (Apr 4, 2025). Matt Levin (prev. CEO of People 2.0, Benefitfocus) named CEO. Leadership change follows flat growth trajectory since $1.17B valuation in 2021.", src:"https://www.businesswire.com/news/home/20250404652765/en/Modern-Health-Appoints-Matt-Levin-as-CEO-Founder-Alyson-Watson-Transitions-to-Executive-Chair", srcLabel:"Business Wire · Apr 2025" },
   { id:"t_allia", year:2025, date:"2025-06", type:"conflict", company:"allia",
@@ -957,7 +983,7 @@ export const TIMELINE_EVENTS = [
 export const SWIM_ORDER = [
   "headway","alma","spring","lyra","betterhelp",
   "grow","sondermind","lifestance","talkspace","talkiatry",
-  "cerebral","ash","allia","headspace","modernhealth",
+  "cerebral","ash","ease","allia","headspace","modernhealth",
   "uhg","centene","hcsc","_industry"
 ];
 
