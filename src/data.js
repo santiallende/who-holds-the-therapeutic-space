@@ -610,14 +610,15 @@ export const COMPANIES = [
     executives:[
       { title:"Managing Partner (OPM Director Jul 2025–)", name:"Scott Kupor", note:"Led Headway Series C/D + Talkiatry Series C personally; took board seats at both. Confirmed as Trump OPM Director July 2025 — controls FEHB program (8M federal employees). Resigned board seats per ethics requirements.", src:"https://fortune.com/2025/04/03/trump-appointee-scott-kupor-resigns-some-a16z-funds-boards-opm-confirmation/" },
       { title:"General Partner, Bio + Health", name:"Julie Yoo", note:"Leads health sector investments", src:"https://a16z.com/author/julie-yoo/" },
+      { title:"General Partner, Bio + Health", name:"Daisy Wolf", note:"Led Ease Health $41M Series A (Feb 2026) — the EHR/CRM/RCM infrastructure layer beneath behavioral health providers. Also invested in Headway.", src:"https://a16z.com/announcement/investing-in-ease/" },
     ],
     board:[
       { name:"Marc Andreessen", role:"Co-Founder, General Partner", src:"https://a16z.com/" },
       { name:"Ben Horowitz", role:"Co-Founder, General Partner", src:"https://a16z.com/" },
     ],
     investors:["LP base: pension funds, endowments, sovereign wealth"],
-    portfolio_mh:["Headway (therapist matching, board seat)","Talkiatry (employed psychiatrists, board seat)","Ash/Slingshot AI (AI therapy)","Cerebral (cautionary — DOJ/DEA investigation)"],
-    conflict:"CRITICAL cross-portfolio: a16z holds equity in Headway (independent therapist matching), Talkiatry (employed psychiatrists), Ash (AI therapy chatbot), and Cerebral (cautionary). Scott Kupor personally led Headway + Talkiatry investments and held board seats at both competing platforms simultaneously. Kupor then became OPM Director — controlling FEHB benefit design for 8M federal employees who use mental health services across precisely these platforms.",
+    portfolio_mh:["Headway (therapist matching, board seat)","Talkiatry (employed psychiatrists, board seat)","Ash/Slingshot AI (AI therapy)","Ease Health (EHR/CRM/RCM infrastructure, $41M Series A Feb 2026)","Cerebral (cautionary — DOJ/DEA investigation)"],
+    conflict:"CRITICAL cross-portfolio: a16z now holds equity across the full behavioral health stack — Headway (independent therapist matching), Talkiatry (employed psychiatrists), Ash (AI therapy), and Ease Health (the EHR/billing infrastructure beneath providers). CEO of Ease is a former a16z investing partner; its President previously sold Refresh Mental Health to Optum. Scott Kupor personally led Headway + Talkiatry investments and held board seats at both simultaneously before becoming OPM Director — controlling FEHB benefit design for 8M federal employees who use mental health services across precisely these platforms.",
     src:"https://a16z.com/announcement/investing-in-talkiatry/",
     srcLabel:"a16z · Jun 2024",
   },
