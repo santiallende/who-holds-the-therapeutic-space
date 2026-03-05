@@ -144,7 +144,7 @@ export const NODES = [
   { id:"spark",    label:"Spark Capital",  type:"vc",  r:11,
     conflict:"Cross-portfolio: leads both Headway AND Talkspace — competing therapist platforms." },
   { id:"a16z",     label:"a16z",           type:"vc",  r:16,
-    conflict:"CRITICAL: Holds equity in Headway (human therapists), Talkiatry (employed psychiatrists), AND Ash (AI therapy). Scott Kupor personally led Headway + Talkiatry investments, took board seats at both, then became Trump's OPM Director (controls FEHB program = 8M federal employees).",
+    conflict:"CRITICAL: Holds equity in Headway (human therapists), Talkiatry (employed psychiatrists), Ash (AI therapy), AND Ease Health (EHR/billing infrastructure). a16z now controls the full behavioral health stack. Scott Kupor personally led Headway + Talkiatry investments, took board seats at both, then became Trump's OPM Director (controls FEHB program = 8M federal employees).",
     src:"https://www.fiercehealthcare.com/health-tech/a16z-partner-scott-kupor-tapped-as-trump-opm-director",
     srcLabel:"Fierce Healthcare · Jan 2025" },
   { id:"sequoia",  label:"Sequoia",        type:"vc",  r:11, src:"https://www.sequoiacap.com/" },
