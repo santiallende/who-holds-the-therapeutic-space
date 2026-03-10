@@ -83,12 +83,18 @@ export const NODES = [
     conflict:"PE firms TPG, Summit, Silversmith owned 66% post-IPO. Therapists are W-2 — PE board directly controls salaries and productivity quotas.",
     src:"https://www.fiercehealthcare.com/tech/lifestance-health-valued-at-more-than-7b-as-stock-jumps-following-ipo",
     srcLabel:"Fierce Healthcare · IPO 2021" },
+  { id:"uhs",       label:"Universal Health Services", type:"public", r:14,
+    raised:null, val:"~$12B market cap (NYSE: UHS)", status:"Acquiring Talkspace — $835M — expected close Q3 2026",
+    investors:[],
+    conflict:"For-profit operator of 400+ acute care hospitals and inpatient psychiatric facilities. Acquiring Talkspace creates a closed referral loop: UHS discharges inpatient psych patients directly into UHS-owned virtual therapy network. Operator + step-down care are the same financial entity — incentivizing internal routing regardless of clinical fit or patient preference.",
+    src:"https://uhs.com/news/universal-health-services-inc-to-acquire-talkspace-inc/",
+    srcLabel:"UHS Press Release · Mar 2026" },
   { id:"talkspace", label:"Talkspace",   type:"public",   r:13,
-    raised:"$109M pre-IPO", val:"$1.4B at SPAC", status:"Public (NASDAQ: TALK)",
+    raised:"$109M pre-IPO", val:"$1.4B at SPAC / $835M acquisition", status:"Acquisition by UHS pending — $835M cash — expected close Q3 2026 (SPAC'd at $1.4B in 2021, 40% haircut)",
     investors:["SoftBank","Norwest","Spark Capital","Public shareholders"],
-    conflict:"Spark Capital backs both Talkspace AND Headway — directly competing platforms. Developing TALK AI chatbot to replace licensed therapists.",
-    src:"https://investors.talkspace.com/",
-    srcLabel:"Talkspace IR" },
+    conflict:"Spark Capital backs both Talkspace AND Headway — directly competing platforms. Developing TALK AI chatbot to replace licensed therapists. UHS acquisition creates closed inpatient-to-virtual referral loop: patients discharged from UHS psychiatric facilities routed to UHS-owned virtual therapy platform.",
+    src:"https://www.fiercehealthcare.com/finance/uhs-acquire-talkspace-estimated-835-million-transaction",
+    srcLabel:"Fierce Healthcare · Mar 2026" },
   { id:"talkiatry", label:"Talkiatry",   type:"platform", r:15,
     raised: "$450M+", val:"Undisclosed", status:"Private — Series D Feb 2026",
     investors:["a16z","General Catalyst","Perceptive Advisors","Sofina","Left Lane Capital","blisce/"],
@@ -227,6 +233,7 @@ export const LINKS = [
   { s:"teladoc",  t:"betterhelp", type:"acquisition" },
   { s:"spring",   t:"alma",       type:"acquisition" },
   { s:"grow",     t:"tenor",      type:"acquisition" },
+  { s:"uhs",      t:"talkspace",  type:"acquisition" },
   // ── Insurer Payer Partnerships / Coalition ──
   { s:"cigna_v",  t:"headway",    type:"partnership" },
   { s:"optum_v",  t:"headway",    type:"partnership" },
@@ -963,6 +970,7 @@ export const TIMELINE_EVENTS = [
   { id:"t27", year:2025, date:"2025-07", type:"warning",  company:"headway",      title:"⚠ Kupor Confirmed as OPM Director",           amount:null, detail:"Scott Kupor (a16z, board seats at Headway + Talkiatry) confirmed as Trump's OPM Director. Controls FEHB program = 8M federal employees. Resigns boards per ethics rules. a16z founders backed Trump.", src:"https://fortune.com/2025/04/03/trump-appointee-scott-kupor-resigns-some-a16z-funds-boards-opm-confirmation/" },
   { id:"t28", year:2025, date:"2025-07", type:"raise",    company:"ash",          title:"Ash (Slingshot AI) Launches — $93M",     amount:93,   detail:"a16z-backed AI therapy chatbot launches publicly. a16z also backs Headway and Talkiatry — same investor across competing human and AI care models.", src:"https://www.businesswire.com/news/home/20250722566346/en/Slingshot-Launches-Ash-the-First-AI-Designed-for-Therapy" },
   { id:"t29", year:2026, date:"2026-01", type:"acquire",  company:"spring",       title:"Spring Health Agrees to Acquire Alma",            amount:null, detail:"Largest pure-play mental health acquisition announced. Deal expected to close Q2 2026. Spring controls both employer purchasing AND therapist practice management.", src:"https://www.prnewswire.com/news-releases/spring-health-joins-forces-with-alma-expanding-access-to-precision-mental-health-care-302673454.html" },
+  { id:"t_uhs_talk", year:2026, date:"2026-03", type:"acquire", company:"talkspace",   title:"UHS Acquires Talkspace — $835M",                  amount:835,  detail:"For-profit hospital giant Universal Health Services acquires Talkspace for $5.25/share (~$835M) — a 40% discount to its 2021 SPAC valuation of $1.4B. Talkspace had 6,000 licensed professionals, 200M+ covered lives, $229M revenue in 2025. UHS CFO described it as an 'accelerant' to its outpatient behavioral strategy. Creates a closed inpatient-to-virtual referral pipeline: patients discharged from UHS psychiatric facilities routed into UHS-owned virtual therapy platform. Operator + step-down care now the same financial entity.", src:"https://www.fiercehealthcare.com/finance/uhs-acquire-talkspace-estimated-835-million-transaction", srcLabel:"Fierce Healthcare · Mar 2026" },
   { id:"t30", year:2026, date:"2026-02", type:"acquire",  company:"grow",         title:"Grow Therapy Acquires Tenor Therapy",    amount:null, detail:"AI scribe tool acquired. Tenor product sunset Feb 28 2026, integrated into Grow platform.", src:"https://bhbusiness.com/2026/02/10/grow-therapy-buys-ai-scribe-tool-tenor-therapy/" },
   { id:"t_grow_d", year:2026, date:"2026-03", type:"raise", company:"grow",        title:"Grow Therapy Series D — $150M",          amount:150,  detail:"$150M Series D led by TCV and Goldman Sachs Alternatives (both returning). New investors BCI and Menlo Ventures join. Total raised $328M. Valuation $3B+. 26,000 providers, 220M covered lives, revenue over $1B, profitable since 2023. Expanding into employer EAP market and health system referrals. Menlo Ventures now backs both Grow (human therapists) and Ash (AI therapy) — the same cross-portfolio conflict pattern as a16z.", src:"https://www.prnewswire.com/news-releases/grow-therapy-raises-150-million-in-series-d-as-it-solidifies-new-flagship-partnerships-302702388.html", srcLabel:"PR Newswire · Mar 2026" },
   { id:"t32", year:2020, date:"2020-09", type:"conflict", company:"uhg",           title:"⚠ Optum Acquires AbleTo — $470M After Investing",
@@ -987,7 +995,7 @@ export const TIMELINE_EVENTS = [
 
 export const SWIM_ORDER = [
   "headway","alma","spring","lyra","betterhelp",
-  "grow","sondermind","lifestance","talkspace","talkiatry",
+  "grow","sondermind","lifestance","uhs","talkspace","talkiatry",
   "cerebral","ash","ease","allia","headspace","modernhealth",
   "uhg","centene","hcsc","_industry"
 ];
